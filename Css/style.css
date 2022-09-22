@@ -13,7 +13,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background-color: #0a0c1a;
 }
 
@@ -33,7 +32,7 @@ section {
 }
 
 figure {
-  flex: 2;
+  flex: 1.8;
   background-image: linear-gradient(#9f64cb, #9f64cb),
     url("../images/image-header-desktop.jpg");
   background-blend-mode: color;
@@ -66,11 +65,18 @@ strong > span {
 }
 
 .texto-1 {
-  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .texto-2 {
-  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.texto-3 {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .numero {
@@ -81,4 +87,43 @@ strong > span {
   padding-top: 10px;
   color: #868597;
   font-size: 15px;
+}
+
+@media (max-width: 1300px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  figure {
+    display: flex;
+    order: 1;
+    flex: 1;
+  }
+
+  .todo {
+    display: flex;
+    flex: 2;
+    order: 2;
+  }
+
+  .titulo {
+    display: flex;
+    text-align: center;
+  }
+
+  .text {
+    display: flex;
+    text-align: center;
+  }
+
+  .texto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
